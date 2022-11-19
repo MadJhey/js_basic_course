@@ -31,10 +31,10 @@
     "use strict";
 
     const value = Number.parseFloat(prompt('Введите число'));
-    const hundreds = Math.trunc(value / 100);
-    const dozens = Math.trunc(value / 10);
-    const units = Math.trunc(value);
-    alert("В числе " + value + " количество сотен: " + hundreds + " , десятков: " + dozens + " , единиц: " + units);
+    const hundreds = Math.trunc((value / 100) % 10);
+    const dozens = Math.trunc((value / 10) % 10);
+    const units = Math.trunc(value % 10);
+    alert(`В числе ${value} количество сотен: ${hundreds} , десятков: ${dozens} единиц: ${units}`);
 
   </script>
 </body>

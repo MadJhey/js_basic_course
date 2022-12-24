@@ -71,7 +71,7 @@
         ev.target.classList.add('active');
         tDEl.textContent = panelText[ev.target.parentElement.dataset.text];
       }
-    })
+    });
 
     /*
     2. Необходимо сделать так, чтобы при изменении input'а менялся и размер шрифта
@@ -81,7 +81,7 @@
      */
     const range = document.querySelector("input"),
       h3 = document.getElementById('inputDiv');
-
+    range.value = Number.parseInt(getComputedStyle(h3).fontSize).toString();
     range.addEventListener("input", function (event) {
       h3.style.fontSize = this.value + "px";
     });

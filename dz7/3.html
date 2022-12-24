@@ -35,11 +35,13 @@
       arr.sort(function (a, b) {
         return b - a;
       })
-      return arr.join('');
+
+      return +arr.join('');
     }
 
 
     console.log(descendingOrder(42145)); // 54421
+    console.log(typeof (descendingOrder(42)));
     console.log(descendingOrder(145263)); // 654321
     console.log(descendingOrder(123456789)); // 987654321
   </script>
